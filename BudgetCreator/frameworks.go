@@ -26,8 +26,8 @@ func framework2() {
 
 	fmt.Printf("\nYour biweekly budget is as follows:\n Rent: $%d\n Utilities: $%d\n Food: $%d\n Phone: $%d\n Gas: $%d\n Investments/Savings: $%d\n Wants: $%d\n",
 		rent/2, util/2, food/2, phone/2, gas/2, leftovers/2, wants/2)
-	fmt.Printf("\nYour monthly expenses is as follows:\n Rent: $%d\n Utilities: $%d\n Food: $%d\n Phone: $%d\n Gas: $%d\n",
-		rent, util, food, phone, gas)
+	fmt.Printf("\nYour monthly expenses is as follows:\n Rent: $%d\n Utilities: $%d\n Food: $%d\n Phone: $%d\n Gas: $%d\n Investments/Savings: $%d\n Wants: $%d\n",
+		rent, util, food, phone, gas, leftovers, wants)
 
 }
 
