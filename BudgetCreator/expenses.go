@@ -5,7 +5,7 @@ import "fmt"
 var biWeekly, rent, util, food, phone, gas, savings, investments, wants, expenses, monthly, leftovers int
 
 func getExpensees() {
-	monthly := biWeekly * 2
+	monthly = biWeekly * 2
 
 	fmt.Printf("How much of your paycheck goes to rent every month: ")
 	fmt.Scanln(&rent)
