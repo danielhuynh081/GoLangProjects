@@ -49,6 +49,20 @@ func framework3() {
 		rent, util, food, phone, gas, debt, savings, wants)
 }
 
+// 30/30/30/10 Framework
+func frameowrk4() {
+	housing := leftovers * 30 / 100
+	necessities := leftovers * 30 / 100
+	goals := leftovers * 30 / 100
+	wants := leftovers * 10 / 100
+
+	fmt.Printf("\nYour biweekly budget is as follows:\n Housing: $%d\n Necessities: $%d\n Goals: $%d\n Wants: $%d\n",
+		housing/2, necessities/2, goals/2, wants/2)
+	fmt.Printf("\nYour monthly budget is as follows:\n Housing: $%d\n Necessities: $%d\n Goals: $%d\n Wants: $%d\n",
+		housing, necessities, goals, wants)
+
+}
+
 func customizeBudget() {
 	//Info gathering
 
