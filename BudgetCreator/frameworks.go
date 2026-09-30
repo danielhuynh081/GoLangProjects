@@ -77,25 +77,3 @@ func customizeBudget() {
 	fmt.Printf("How much of your paycheck goes to gas every month: ")
 	fmt.Scanln(&gas)
 }
-
-func anaylyzeExpenes() {
-	//No more than 30%-35% of your income should go to rent
-	//No more than 10%-15% of your income should go to utilities
-	//no more than 10%-15% of your income should go to food
-	//monthly icnoem should be ~50% for needs, ~30% wants ~20% investing and savings
-	if rent > monthly*35/100 {
-		fmt.Printf("\nYou are spending too much on rent! (~%d%% of your income)\nConsider finding a cheaper place to live.\n", rent*100/monthly)
-	}
-	if util > monthly*15/100 {
-		fmt.Printf("\nYou are spending too much on utilities! Consider finding ways to reduce your utility bills.\n")
-	}
-	if food > monthly*15/100 {
-		fmt.Printf("\nYou are spending too much on food! Consider finding ways to reduce your food expenses.\n")
-	}
-	if phone > monthly*2/100 {
-		fmt.Printf("\nYou are spending too much on your phone! Consider finding a cheaper phone plan.\n")
-	}
-	if car > monthly*10/100 {
-		fmt.Printf("\nYour car payments are too high, consider finding a cheaper car or refinancing your car loan.\n")
-	}
-}

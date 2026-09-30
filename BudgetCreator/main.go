@@ -10,7 +10,7 @@ func main() {
 	//Expenses
 	getExpensees()
 	fmt.Printf(" \nYour monthly expenses are: $%d\nYour nmonthly income is: $%d\nLeftover funds: $%d\n", expenses, monthly, leftovers)
-	anaylyzeExpenes()
+	anaylyzeExpenses()
 	//Budget leftovers
 	menu()
 
