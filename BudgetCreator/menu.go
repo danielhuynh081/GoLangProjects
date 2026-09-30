@@ -29,7 +29,7 @@ Enter your choice: `)
 		framework3()
 	case 4:
 		fmt.Println("You chose the 30/30/30/10 Framework.")
-		frameowrk4()
+		framework4()
 	case 5:
 		fmt.Println("You chose to customize your budget.")
 		customizeBudget()

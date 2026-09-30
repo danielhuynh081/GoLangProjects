@@ -50,22 +50,20 @@ func framework3() {
 }
 
 // 30/30/30/10 Framework
-func frameowrk4() {
-	housing := leftovers * 30 / 100
-	necessities := leftovers * 30 / 100
-	goals := leftovers * 30 / 100
+func framework4() {
+	necessities := leftovers * 20 / 100
+	goals := leftovers * 70 / 100
 	wants := leftovers * 10 / 100
 
-	fmt.Printf("\nYour biweekly budget is as follows:\n Housing: $%d\n Necessities: $%d\n Goals: $%d\n Wants: $%d\n",
-		housing/2, necessities/2, goals/2, wants/2)
-	fmt.Printf("\nYour monthly budget is as follows:\n Housing: $%d\n Necessities: $%d\n Goals: $%d\n Wants: $%d\n",
-		housing, necessities, goals, wants)
+	fmt.Printf("\nYour biweekly budget is as follows:\n Necessities/Emeregency: $%d\n Goals: $%d\n Wants: $%d\n",
+		necessities/2, goals/2, wants/2)
+	fmt.Printf("\nYour monthly budget is as follows:\n Necessities/Emergency: $%d\n Goals: $%d\n Wants: $%d\n",
+		necessities, goals, wants)
 
 }
 
 func customizeBudget() {
 	//Info gathering
-
 	fmt.Printf("How much of your paycheck goes to rent every month: ")
 	fmt.Scanln(&rent)
 	fmt.Printf("How much of your paycheck goes to utilities every month: ")
@@ -74,7 +72,30 @@ func customizeBudget() {
 	fmt.Scanln(&food)
 	fmt.Printf("How much of your paycheck goes to phone every month: ")
 	fmt.Scanln(&phone)
+	fmt.Printf("How much of your paycheck goes to a car payment every month: ")
+	fmt.Scanln(&car)
 	fmt.Printf("How much of your paycheck goes to gas every month: ")
 	fmt.Scanln(&gas)
+}
 
+func anaylyzeExpenes() {
+	//No more than 30%-35% of your income should go to rent
+	//No more than 10%-15% of your income should go to utilities
+	//no more than 10%-15% of your income should go to food
+	//monthly icnoem should be ~50% for needs, ~30% wants ~20% investing and savings
+	if rent > monthly*35/100 {
+		fmt.Printf("\nYou are spending too much on rent! (~%d%% of your income)\nConsider finding a cheaper place to live.\n", rent*100/monthly)
+	}
+	if util > monthly*15/100 {
+		fmt.Printf("\nYou are spending too much on utilities! Consider finding ways to reduce your utility bills.\n")
+	}
+	if food > monthly*15/100 {
+		fmt.Printf("\nYou are spending too much on food! Consider finding ways to reduce your food expenses.\n")
+	}
+	if phone > monthly*2/100 {
+		fmt.Printf("\nYou are spending too much on your phone! Consider finding a cheaper phone plan.\n")
+	}
+	if car > monthly*10/100 {
+		fmt.Printf("\nYour car payments are too high, consider finding a cheaper car or refinancing your car loan.\n")
+	}
 }
