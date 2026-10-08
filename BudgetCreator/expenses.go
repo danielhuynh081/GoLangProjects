@@ -45,7 +45,7 @@ func readInt(prompt string) int {
 	}
 }
 
-func getExpensees() {
+func getExpenses() {
 	b.monthly = b.biWeekly * 2
 
 	b.rent = readInt("How much of your paycheck goes to rent every month: ")
@@ -59,7 +59,7 @@ func getExpensees() {
 	b.leftovers = b.monthly - b.expenses
 }
 
-func anaylyzeExpenses() {
+func analyzeExpenses() {
 	if b.monthly == 0 {
 		fmt.Println("Monthly income is zero. Cannot perform analysis.")
 		return

@@ -9,8 +9,7 @@ func menu() {
 (3) Pay-Yourself-First (Currently in debt, need to focus on paying off debt first.)
 (4) 30/30/30/10 Framework (Currently comfortable, but want to focus on saving and investing more and less wants.)
 (5) Customize Budget
-(6) Import from CSV (OnPoint)
-(7) Exit
+(6) Exit
 
 `)
 
@@ -33,12 +32,6 @@ func menu() {
 		fmt.Println("You chose to customize your budget.")
 		customizeBudget()
 	case 6:
-		fmt.Println("Importing data from CSV...")
-		loadFromCSV()
-		fmt.Printf(" \nYour monthly expenses are: $%d\nYour monthly income is: $%d\nLeftover funds: $%d\n", b.expenses, b.monthly, b.leftovers)
-		anaylyzeExpenses()
-		menu() // Return to menu after analysis
-	case 7:
 		fmt.Println("Goodbye!")
 		return
 	default:

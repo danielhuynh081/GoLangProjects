@@ -70,4 +70,11 @@ func customizeBudget() {
 	b.phone = readInt("How much of your paycheck goes to phone every month: ")
 	b.car = readInt("How much of your paycheck goes to a car payment every month: ")
 	b.gas = readInt("How much of your paycheck goes to gas every month: ")
+
+	b.expenses = b.rent + b.util + b.food + b.phone + b.gas + b.car
+	b.leftovers = b.monthly - b.expenses
+	
+	fmt.Printf("\nNew total monthly expenses: $%d\n", b.expenses)
+	fmt.Printf("New leftover funds: $%d\n", b.leftovers)
+	analyzeExpenses()
 }
