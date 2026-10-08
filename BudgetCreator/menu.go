@@ -3,19 +3,18 @@ package main
 import "fmt"
 
 func menu() {
-	var choice int
-
 	fmt.Print(`
 (1) 50/30/20 Framework (Currently comfortable, just need to save and invest more.)
 (2) Zero-Based Budgeting (Currently struggling to make ends meet, need to budget every dollar.)
 (3) Pay-Yourself-First (Currently in debt, need to focus on paying off debt first.)
 (4) 30/30/30/10 Framework (Currently comfortable, but want to focus on saving and investing more and less wants.)
 (5) Customize Budget
-(6) Exit
+(6) Import from CSV (OnPoint)
+(7) Exit
 
-Enter your choice: `)
+`)
 
-	fmt.Scanln(&choice)
+	choice := readInt("Enter your choice: ")
 
 	switch choice {
 	case 1:
@@ -34,9 +33,16 @@ Enter your choice: `)
 		fmt.Println("You chose to customize your budget.")
 		customizeBudget()
 	case 6:
+		fmt.Println("Importing data from CSV...")
+		loadFromCSV()
+		fmt.Printf(" \nYour monthly expenses are: $%d\nYour monthly income is: $%d\nLeftover funds: $%d\n", b.expenses, b.monthly, b.leftovers)
+		anaylyzeExpenses()
+		menu() // Return to menu after analysis
+	case 7:
 		fmt.Println("Goodbye!")
 		return
 	default:
 		fmt.Println("Invalid choice. Please try again.")
+		menu()
 	}
 }
