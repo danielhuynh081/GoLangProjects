@@ -6,6 +6,7 @@ BudgetMe is a personal GoLang project I built to learn the fundamentals of GoLan
 
 - A couple common frameworks. (50/30/20, pay yourself first, etc)
 - currently focused on budgeting money after monthly expenses
+- **NEW**: Automatic expense calculation and categorization from bank CSV statements (last 1, 2, and 3 months).
 
 ## Built With
 

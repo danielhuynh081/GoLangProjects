@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -32,6 +33,9 @@ func readInt(prompt string) int {
 		fmt.Print(prompt)
 		input, err := reader.ReadString('\n')
 		if err != nil {
+			if err == io.EOF {
+				return 0
+			}
 			fmt.Println("Error reading input. Please try again.")
 			continue
 		}
